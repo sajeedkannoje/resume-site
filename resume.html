@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Your Resume</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/resume.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+  <style>
+.progress-bar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #007bff;
+  transition: width 0.6s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar {
+    transition: none;
+  }
+}
+  </style>
+</head>
+
+<body class="bg-light">
+  <!-- Page Container -->
+  <div class="container py-4">
+    <!-- The Grid -->
+    <button class="print-button" onclick="window.print()">Print</button>
+    <div class="card border-0">
+      <div class="row card-body">
+        <!-- Left Column -->
+        <div class="col-lg-4">
+          <div class="card text-dark">
+            <img class="card-img-top avatar-img" src="" alt="Avatar" />
+            <div class="card-body">
+              <div class="card-text mt-3">
+                <h2 class="name h5"></h2>
+                <div class="headline"></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div>
+                <p>
+                  <i class="fa fa-home me-2 text-primary"></i><span class="address"></span>
+                </p>
+                <p>
+                  <i class="fa fa-envelope me-2 text-primary"></i>
+                  <span class="email"></span>
+                </p>
+                <p>
+                  <i class="fa fa-phone me-2 text-primary"></i>
+                  <span class="phone"></span>
+                </p>
+                <p>
+                  <i class="fa fa-globe me-2 text-primary"></i>
+                  <span class="website"></span>
+                </p>
+              </div>
+              <hr />
+              <div class="skills-box">
+                <p class="fw-bold mb-1">
+                  <i class="fa fa-asterisk me-2 text-primary"></i>Skills
+                </p>
+                <div class="skills">
+                  <!-- Skills will be populated dynamically -->
+                </div>
+              </div>
+              <hr />
+              <div class="profile-box">
+                <p class="fw-bold mb-1">
+                  <i class="fa fa-external-link me-2 text-primary"></i>Socials
+                </p>
+                <div class="profile">
+                  <!-- Socials will be populated dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <!-- End Left Column -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="h5 mb-4">
+                <i class="fa fa-suitcase me-2 text-primary"></i>
+                Work
+                Experience
+              </h2>
+              <div class="mb-4 experience-body">
+                <!-- Work experience will be populated dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h2 class="h5 mb-4">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Education
+              </h2>
+
+              <div class="mb-4 education-body">
+                <!-- Education will be populated dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h2 class="h5 mb-4">
+                <i class="fa fa-file-code-o" aria-hidden="true"></i>
+                Projects
+              </h2>
+
+              <div class="mb-4 project-body">
+                <!-- project will be populated dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- End Right Column -->
+        </div>
+
+        <!-- End Grid -->
+      </div>
+
+      <!-- End Page Container -->
+    </div>
+  </div>
+    <script src="js/index.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+      // Call the function
+      populateResumeData();
+      });
+    </script>
+</body>
+
+</html>
